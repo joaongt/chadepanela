@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image'
 import { useState } from 'react'
+import Link from 'next/link';
 
 const Products = () => {
   const [minPrice, setMinPrice] = useState("00.00");
@@ -60,16 +61,21 @@ const Products = () => {
 
   return (
     <div className="bg-white rounded-lg p-8">
+      <Link href="/" legacyBehavior>
+              <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700">
+                Back to Home
+              </a>
+      </Link>
       <h1 className="text-2xl font-bold mb-4">Products for the Wedding Pantry Shower</h1>
       <p className="text-lg mb-4">Here are some products that you can buy for the couple:</p>
       <div className="flex justify-between mb-4">
         <div>
           <label htmlFor="min-price">Preço Mínimo<br></br></label>
-          <input type="text" id="min-price" name="min-price" value={minPrice} onChange={handleMinPriceChange} className="border border-gray-300 rounded-lg px-4 py-2" />
+          <input type="number" id="min-price" name="min-price" value={minPrice} onChange={handleMinPriceChange} className="border border-gray-300 rounded-lg px-4 py-2" />
         </div>
         <div>
           <label htmlFor="max-price">Preço Máximo<br></br></label>
-          <input type="text" id="max-price" name="max-price" value={maxPrice} onChange={handleMaxPriceChange} className="border border-gray-300 rounded-lg px-4 py-2" />
+          <input type="number" id="max-price" name="max-price" value={maxPrice} onChange={handleMaxPriceChange} className="border border-gray-300 rounded-lg px-4 py-2" />
         </div>
       </div>
       <ul className="grid grid-cols-3 gap-24 m-20">
