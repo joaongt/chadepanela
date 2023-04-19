@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 const Products = () => {
-  const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(999999);
+  const [minPrice, setMinPrice] = useState("00.00");
+  const [maxPrice, setMaxPrice] = useState("99.99");
   
   const products = [
     {
@@ -33,12 +33,29 @@ const Products = () => {
   const filteredProducts = products.filter(product => product.price >= minPrice && product.price <= maxPrice);
 
   const handleMinPriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMinPrice(Number(event.target.value));
-  }
+    let numberValue = event.target.value.replace(/\D/g, ''); // removes all non-numeric characters
+    numberValue = numberValue.slice(0, 4); // limits the string to 4 characters
+  
+    if (numberValue.length > 2) {
+      numberValue = numberValue.slice(0, 2) + "." + numberValue.slice(2); // adds a dot after the first 2 digits
+    }
+  
+    event.target.value = numberValue;
+    setMinPrice(Number(numberValue));
+  };
   
   const handleMaxPriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMaxPrice(Number(event.target.value));
-  }
+    let numberValue = event.target.value.replace(/\D/g, ''); // removes all non-numeric characters
+    numberValue = numberValue.slice(0, 4); // limits the string to 4 characters
+  
+    if (numberValue.length > 2) {
+      numberValue = numberValue.slice(0, 2) + "." + numberValue.slice(2); // adds a dot after the first 2 digits
+    }
+  
+    event.target.value = numberValue;
+    setMaxPrice(Number(numberValue));
+  };
+  
   
 
   return (
@@ -48,11 +65,11 @@ const Products = () => {
       <div className="flex justify-between mb-4">
         <div>
           <label htmlFor="min-price">Preço Mínimo<br></br></label>
-          <input type="number" id="min-price" name="min-price" value={minPrice} onChange={handleMinPriceChange} className="border border-gray-300 rounded-lg px-4 py-2" />
+          <input type="text" id="min-price" name="min-price" value={minPrice} onChange={handleMinPriceChange} className="border border-gray-300 rounded-lg px-4 py-2" />
         </div>
         <div>
           <label htmlFor="max-price">Preço Máximo<br></br></label>
-          <input type="number" id="max-price" name="max-price" value={maxPrice} onChange={handleMaxPriceChange} className="border border-gray-300 rounded-lg px-4 py-2" />
+          <input type="text" id="max-price" name="max-price" value={maxPrice} onChange={handleMaxPriceChange} className="border border-gray-300 rounded-lg px-4 py-2" />
         </div>
       </div>
       <ul className="grid grid-cols-3 gap-24 m-20">
