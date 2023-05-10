@@ -56,6 +56,38 @@ const Products = () => {
       url:'https://www.americanas.com.br/produto/3467628803/aspirador-vertical-1000w-1-2l-electrolux-stk12',
       mkp:'Americanas'
     },
+    {
+      id: 7,
+      name: 'Jogo de Petisqueira Coração',
+      image: '/images/petisqueira.jpg',
+      price: 38.90,
+      url:'https://shopee.com.br/product/406093328/16008762736?d_id=5afed&utm_content=3UvRAScNK4R6JKb8wHde1vEBhuo5',
+      mkp:'Shopee'
+    },
+    {
+      id: 8,
+      name: 'Garrafa Termica Nordica',
+      image: '/images/garrafa.jpg',
+      price: 99.90,
+      url:'https://shopee.com.br/product/405597031/13674322789?d_id=5afed&utm_content=3UvRAScNK4dRH7b3zKSjyQuBuj5q',
+      mkp:'Shopee'
+    },
+    {
+      id: 9,
+      name: 'Air Fry Philco 4L Preta',
+      image: '/images/airfryer.jpg',
+      price: 469.90,
+      url:'https://www.casasbahia.com.br/fritadeira-eletrica-sem-oleo-air-fry-philco-pfr15pg-gourmet-4l-preta/p/55035451',
+      mkp:'Casas Bahia'
+    },
+    {
+      id: 10,
+      name: 'Liquidificador Electrolux 700w com Copo de Vidro',
+      image: '/images/liquidificador.JPG',
+      price: 369.00,
+      url:'https://loja.electrolux.com.br/liquidificador-electrolux-700w-com-copo-de-vidro-tecnologia-truflow-experience-ebs30/p',
+      mkp:'Electrolux'
+    },
   ];
   let filteredProducts = products;
 
