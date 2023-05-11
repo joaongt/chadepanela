@@ -88,6 +88,70 @@ const Products = () => {
       url:'https://loja.electrolux.com.br/liquidificador-electrolux-700w-com-copo-de-vidro-tecnologia-truflow-experience-ebs30/p',
       mkp:'Electrolux'
     },
+    {
+      id: 11,
+      name: 'Colcha 3 Peças QUEEN Corttex Milão Azul',
+      image: '/images/cama.jpg',
+      price: 148.78,
+      url:'https://www.todecorando.com.br/colcha-3-pecas-queen-corttex-milao-azul/p',
+      mkp:'Tô Decorando'
+    },
+    {
+      id: 12,
+      name: '2 Banquetas Estofadas Giratória Preta',
+      image: '/images/banco.jpg',
+      price: 690.21,
+      url:'https://www.submarino.com.br/produto/5473081445',
+      mkp:'Submarino'
+    },
+    {
+      id: 13,
+      name: 'Ferro de Passar a Vapor Electrolux',
+      image: '/images/ferro.jpg',
+      price: 92.00,
+      url:'https://www.casasbahia.com.br/ferro-de-passar-a-vapor-electrolux-efficient-esi10-com-spray-e-base-antiaderente-azul/p/55058111',
+      mkp:'Casas Bahia'
+    },
+    {
+      id: 14,
+      name: 'Varal de Parede Recolhível Seca Fácil',
+      image: '/images/varal.JPG',
+      price: 49.99,
+      url:'https://www.amazon.com.br/Varal-Parede-Recolh%C3%ADvel-Seca-F%C3%A1cil/dp/B076QGDVSL/ref=asc_df_B076QGDVSL/?tag=googleshopp06-20&linkCode=df0&hvadid=379755604079&hvpos=&hvnetw=g&hvrand=9949169672966137105&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=1001566&hvtargid=pla-811912834025&psc=1',
+      mkp:'Amazon'
+    },
+    {
+      id: 15,
+      name: 'Pote Porta Mantimentos',
+      image: '/images/pote.jpg',
+      price: 9.90,
+      url:'https://shopee.com.br/Pote-Porta-Mantimentos-Modelos-Diversos-Cl%C3%A1ssico-Alimentos-i.350879675.16830805829',
+      mkp:'Shopee'
+    },
+    {
+      id: 16,
+      name: 'Kit 4 Peças Organizador Pia Banheiro',
+      image: '/images/lava.jpg',
+      price: 27.90,
+      url:'https://shopee.com.br/product/718699235/21525101273?gclid=Cj0KCQjw0tKiBhC6ARIsAAOXutkPKOVNPlRV4HIHS4AZqPbT1o9AkaHvmVZOD1JcmKmhEzfYIR_PCcEaAmZNEALw_wcB',
+      mkp:'Shopee'
+    },
+    {
+      id: 17,
+      name: 'Jogo De Panelas 8 Peças Ceramic',
+      image: '/images/panela.JPG',
+      price: 731.83,
+      url:'https://www.casasbahia.com.br/jogo-de-panelas-8-pecas-ceramic-life-smart-plus-cinza-brinox/p/1537818723',
+      mkp:'Casas Bahia'
+    },
+    {
+      id: 18,
+      name: 'Panela de Pressão Tramontina',
+      image: '/images/pressao.jpg',
+      price: 219.00,
+      url:'https://www.tramontina.com.br/panela-de-pressao-tramontina-vancouver-em-aluminio-com-revestimento-interno-e-externo-antiaderente-starflon-max-grafite-20-cm-4-5-l/20582620.html',
+      mkp:'Tramontina'
+    },
   ];
   let filteredProducts = products;
 
@@ -109,18 +173,26 @@ const Products = () => {
   
 
   return (
-    <div className="bg-white rounded-lg p-8">
-      <Link href="/" legacyBehavior>
-        <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 mb-8">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M9.707,4.293c0.391-0.391,1.023-0.391,1.414,0l5,5C16.902,9.488,17,9.744,17,10c0,0.256-0.098,0.512-0.293,0.707l-5,5c-0.391,0.391-1.023,0.391-1.414,0c-0.391-0.391-0.391-1.023,0-1.414L13.586,11H3c-0.553,0-1-0.447-1-1s0.447-1,1-1h10.586l-3.293-3.293C9.316,5.316,9.316,4.684,9.707,4.293z"/>
-          </svg>
-          Back to Home
-        </a>
-      </Link>
-      <h1 className="text-2xl font-bold mb-4">Products for the Wedding Pantry Shower</h1>
-      <p className="text-lg">Here are some products that you can buy for the couple:</p>
-      <p className="text-lg mb-8">These products are available on various marketplaces. Please click the button below to be redirected to the appropriate website to complete your purchase.</p>
+  
+  <div className="container mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div className="bg-white rounded-lg p-8">
+        <Link href="/" legacyBehavior>
+          <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 mb-8">
+            Volte para a página principal
+          </a>
+        </Link>
+        <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4x1 sm:leading-10">Produtos para o chá de panela do casal</h1>
+        <div className="mt-6 max-w-2xl text-xl leading-7 text-gray-500">
+          <p className="text-lg">Primeiro observe as instruções abaixo:</p>
+          <ol className="mt-4 list-decimal list-inside">
+            <li className="mb-4">Coloque o produto desejado no formulário disponível no site. É importante que cada compra seja registrada no formulário para que o casal possa acompanhar o que já foi comprado pelos convidados.</li>
+            <li className="mb-4">Os produtos listados no site são apenas exemplos do que o casal gostaria de ganhar. Caso um convidado encontre o mesmo produto em outra loja por um preço mais barato, ele pode realizar a compra, mas é importante que o produto também seja registrado no formulário.</li>
+            <li className="mb-4">Se o convidado não quiser dar nenhum desses produtos que estão listados ele poderá realizar a compra do produto que ele achar melhor para o casal, mas é importante lembrar de registrar o produto no formulário. </li>
+          </ol>
+        </div>
+      
+      <p className="text-2xl leading-16 text-black-100 sm:text-1x1 sm:leading-8 mb-8 mt-16">Esses produtos estão disponíveis em diversos Marketplaces. Por favor clique no produto que deseja comprar para ser redirecionado a página do produto para completar sua compra. Assim que o produto for comprado não esqueça de fazer o formulário da página principal.</p>
+
       <div className="flex mb-4">
       <div>
         <label htmlFor="priceRange" className="mr-4">Filtrar preços:</label>
@@ -136,6 +208,11 @@ const Products = () => {
           <option value="all">Todos os marketplaces</option>
           <option value="Shopee">Shopee</option>
           <option value="Americanas">Americanas</option>
+          <option value="Amazon">Amazon</option>
+          <option value="Tramontina">Tramontina</option>
+          <option value="Submarino">Submarino</option>
+          <option value="Casas Bahia">Casas Bahia</option>
+          <option value="Electrolux">Electrolux</option>
         </select>
       </div>
       </div>
@@ -152,7 +229,8 @@ const Products = () => {
         ))}
       </ul>
     </div>
-  )
+  </div>
+)
 }
 
 

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image'
 import { useState } from 'react';
@@ -23,10 +22,6 @@ import React from 'react'
 
   return (
       <div className="flex items-center justify-center h-full">
-      <Head>
-        <title>Our Wedding Pantry Shower</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-center h-screen">
           <Image
@@ -36,12 +31,11 @@ import React from 'react'
             height="200"
             alt="Wedding Photo"
           />
-          <h1 className="text-4xl font-extrabold text-gray-900">Our Love Story</h1>
+          <h1 className="text-4xl font-extrabold text-gray-900">Chá de panela do casal</h1>
           <p className="mt-3 text-xl text-gray-500 max-w-lg text-center">
-            We met in college and have been inseparable ever since. After years of dating, we've
-            decided to tie the knot and start the next chapter of our lives together.
+            Clique no botão abaixo para olhar nossa lista de produtos para dar de presente. Por favor, leiam as instruções primeiro antes de comprar.
           </p>
-          <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 absolute top-4 right-3 text-2xl cursor-pointer hover:bg-pink-700" onClick={handleShowForm}>Add a product</button>
+          <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 absolute top-4 right-3 text-2xl cursor-pointer hover:bg-pink-700" onClick={handleShowForm}>Formulário</button>
           {showForm ? (
             <div className="rounded-3xl absolute sm:px-24 sm:py-14 bg-pink-300 flex justify-center items-center">
             <><React.Fragment>
@@ -86,13 +80,13 @@ import React from 'react'
                     <option value="">--Select a Marketplace--</option>
                     <option value="Shopee">Shopee</option>
                     <option value="Americanas">Americanas</option>
-                    <option value="Other">Other</option>
+                    <option value="Other">Outros</option>
                     {/* Add more options as needed */}
                   </select>
                   <button
                     type="submit"
                     className="flex items-center w-full justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-200"
-                  >Submit</button>
+                  >Enviar</button>
                 </form>
 
               </div></></div>
@@ -103,7 +97,7 @@ import React from 'react'
           <div className="mt-6">
             <Link href="/products" legacyBehavior>
               <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700">
-                Buy Us a Gift
+                Compre um presente!
               </a>
             </Link>
           </div>
