@@ -37,7 +37,7 @@ import React from 'react'
           </p>
           <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 absolute top-4 right-3 text-2xl cursor-pointer hover:bg-pink-700" onClick={handleShowForm}>Formulário</button>
           {showForm ? (
-            <div className="rounded-3xl absolute sm:px-24 sm:py-14 bg-pink-300 flex justify-center items-center">
+            <div className="rounded-3xl absolute sm:px-24 sm:py-14 bg-pink-200 flex justify-center items-center">
             <><React.Fragment>
               
               <button className="absolute top-4 right-3 text-2xl cursor-pointer" onClick={handleCloseForm}>
@@ -59,30 +59,6 @@ import React from 'react'
                     id="product"
                     required
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4" />
-                  <label className="block text-gray-700 font-bold mb-2" htmlFor="product">
-                    Product Id
-                  </label>
-                  <input
-                    type="text"
-                    name="productId"
-                    id="productId"
-                    required
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-                  <label className="block text-gray-700 font-bold mt-4 mb-2" htmlFor="marketplace">
-                    Marketplace
-                  </label>
-                  <select
-                    name="marketplace"
-                    id="marketplace"
-                    required
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-8"
-                  >
-                    <option value="">--Select a Marketplace--</option>
-                    <option value="Shopee">Shopee</option>
-                    <option value="Americanas">Americanas</option>
-                    <option value="Other">Outros</option>
-                    {/* Add more options as needed */}
-                  </select>
                   <button
                     type="submit"
                     className="flex items-center w-full justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-200"
