@@ -13,13 +13,6 @@ import React from 'react'
     setShowForm(false);
   }
 
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    // Add code to handle the form submission and remove the product from the list of products to buy
-  };
-
-
   return (
       <div className="flex items-center justify-center h-full">
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,7 +42,7 @@ import React from 'react'
               </button>
               
             </React.Fragment><div className="relative">
-                <form onSubmit={handleFormSubmit} className="mb-4">
+                <form className="mb-4">
                   <label className="block text-gray-700 font-bold mb-2" htmlFor="product">
                     Product Name
                   </label>
@@ -61,7 +54,7 @@ import React from 'react'
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4" />
                   <button
                     type="submit"
-                    className="flex items-center w-full justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-200"
+                    className="flex items-center w-full justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700"
                   >Enviar</button>
                 </form>
 
